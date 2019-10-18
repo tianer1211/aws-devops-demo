@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /test01.war
+    destination: /opt/tomcat/webapps/
+hooks:
+  AfterInstall:
+    - location: scripts/RunAfterInstall.sh
+      timeout: 180
+  ApplicationStop:
+    - location: scripts/stop_tomcat.sh
+  ApplicationStart:
+    - location: scripts/start_tomcat.sh
+  ValidateService:
+    - location: scripts/MonitorService.sh
+      timeout: 3600

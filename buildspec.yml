@@ -16,9 +16,5 @@ artifacts:
   files:
     - target/test01.war
     - appspec.yml
-  discard-paths: yes
-  secondary-artifacts:
-    artifact1:
-      files:
-        - scripts/*
-      discard-paths: no
+    - scripts/*
+  discard-paths: no

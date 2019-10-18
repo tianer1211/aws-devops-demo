@@ -6,7 +6,7 @@ files:
 hooks:
   AfterInstall:
     - location: scripts/RunAfterInstall.sh
-      timeout: 180
+      timeout: 181
   ApplicationStop:
     - location: scripts/stop_tomcat.sh
   ApplicationStart:
